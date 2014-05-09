@@ -19,7 +19,7 @@ png(filename="plot4.png",width=480,height=480)
 par(mfrow=c(2,2))
 
 # draw the 1st graph
-plot(x=plot4$DateTime,y=plot4$Global_active_power,type="l",ylab="Global Active Power (kilowatts)",xlab="")
+plot(x=plot4$DateTime,y=plot4$Global_active_power,type="l",ylab="Global Active Power",xlab="")
 
 # draw the 2nd graph
 plot(x=plot4$DateTime,y=plot4$Voltage,type="l",ylab="Voltage",xlab="datetime")
@@ -28,7 +28,8 @@ plot(x=plot4$DateTime,y=plot4$Voltage,type="l",ylab="Voltage",xlab="datetime")
 plot(x=plot4$DateTime,y=plot4$Sub_metering_1,type="l",col="black",ylab="Energy sub metering",xlab="")
 lines(x=plot4$DateTime,y=plot4$Sub_metering_2,col="red")
 lines(x=plot4$DateTime,y=plot4$Sub_metering_3,col="blue")
-legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),lty=1,col=c("black","red","blue")，bty="n")
+legend("topright",legend=c("Sub_metering_1","Sub_metering_2","Sub_metering_3"),
+       lty=1, col=c("black","red","blue"),bty="n")
 
 # draw the 4th graph
 plot(x=plot4$DateTime,y=plot4$Global_reactive_power,type="l",ylab="Global_reactive_power",xlab="datetime")
